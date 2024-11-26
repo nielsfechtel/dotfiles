@@ -9,8 +9,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# Niels' aliases
-# to make aliases work with sudo, from askubuntu.com/questions/22037
 # Niels' section
 
 # Bash vi-mode and re-add Ctrl-L for clear
@@ -33,10 +31,14 @@ alias sudo='sudo '
 # fzf with preview
 alias fzfp='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
-# basics
-alias la='ls -la'
-alias ls='ls -l'
+# basic aliases
+alias ls='ls -l --color=auto'
+alias ll='ls -la'
+# also sort by time (-t), human-readable units (-h), reverse order (-r)
+alias la='ls -lathr'
+
 alias v='nvim'
+
 alias ..='cd ..'
 alias ...='cd ../../../'
 # do not delete / or prompt if deleting more than 3 files at a time
@@ -54,6 +56,7 @@ alias chgrp='chgrp --preserve-root'
 
 
 # git
+alias lz='lazygit'
 alias gs='git status'
 function gsw() { git switch "$@"; }
 function gcm() { git commit -m "$@"; }
