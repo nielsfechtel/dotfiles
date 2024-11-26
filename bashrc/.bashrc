@@ -11,6 +11,20 @@ PS1='[\u@\h \W]\$ '
 
 # Niels' aliases
 # to make aliases work with sudo, from askubuntu.com/questions/22037
+# Niels' section
+
+# Bash vi-mode and re-add Ctrl-L for clear
+set -o vi
+bind -x '"\C-l":clear'
+
+# History longer
+export HISTFILE=~/.histfile
+export HISTSIZE=25000
+export SAVEHIST=25000
+# apparently default, but necessary to set e.g. for MacOS
+export HISTCONTROL=ignorespace
+
+# Make aliases work with sudo, from askubuntu.com/questions/22037
 # "Bash only checks the first word of a command for an alias. [...] We can tell bash to check
 # the next word after the alias (i.e. sudo) by adding a space at the end of the alias value"
 # Note that this breaks if using a flag for sudo; there are other longer solutions in the same question.
