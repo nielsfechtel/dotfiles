@@ -1,4 +1,7 @@
+# ! "Run hyprshade install every time you make changes to hyprshade.toml to keep the user units in sync."
+
 [[shades]]
+# this is no shader, see hyprshade ls 
 name = "vibrance"
 default = true  # shader to use during times when there is no other shader scheduled
 
