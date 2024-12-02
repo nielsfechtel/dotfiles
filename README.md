@@ -31,8 +31,8 @@ Clone this into `~` and `cd` inside; then run `stow -S <package-name, e.g. kitty
 | Editor            | [neovim](https://github.com/neovim/neovim)      |
 | Browser           | [zen-browser](https://github.com/zen-browser/desktop) |
 | Bar               | [waybar](https://github.com/Alexays/Waybar)      |
-| Launcher          | [wofi]([https://github.com/davatorium/rofi](https://hg.sr.ht/~scoopta/wofi))          |
-| Color Theme       | [Catppuccin Mocha]([https://github.com/dylanaraps/pywal](https://github.com/catppuccin/hyprland)) |
+| Launcher          | [wofi](https://hg.sr.ht/~scoopta/wofi)        |
+| Color Theme       | [Catppuccin Mocha](https://github.com/catppuccin/hyprland) |
 | Blue Light Filter | [hyprshade](https://github.com/loqusion/hyprshade)
 | Wallpapers        | [hyprpaper](https://github.com/hyprwm/hyprpaper)
 | Lockscreen        | [hyprlock](https://github.com/hyprwm/hyprlock)  |
