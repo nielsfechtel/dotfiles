@@ -33,7 +33,8 @@ Clone this into `~` and `cd` inside; then run `stow -S <package-name, e.g. kitty
 | Color Theme       | [Catppuccin Mocha](https://github.com/catppuccin/hyprland) |
 | Wallpapers        | [hyprpaper](https://github.com/hyprwm/hyprpaper)
 | Lockscreen        | [hyprlock](https://github.com/hyprwm/hyprlock)  |
-| Lock when idle    | [hypridle](https://github.com/hyprwm/hypridle)
+| Lock when idle    | [hypridle](https://github.com/hyprwm/hypridle) |
+| Keyboard layout (Svalboard) | [Keybard](https://github.com/svalboard/keybard) |
 
 
 
