@@ -22,14 +22,15 @@ return {
       })
 
       local builtin = require("telescope.builtin")
-      vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-      vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
+      -- find files
       vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Telescope find git-tracked files only" })
       vim.keymap.set("n", "<C-g>", function()
-        builtin.find_files({ no_ignore = true })
+        builtin.find_files({ no_ignore = true, hidden = true })
       end, { desc = "Telescope find ALL files including gitignored" })
+
+      -- search w/ text
+      vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
       vim.keymap.set("n", "<leader>fw", function()
         local word = vim.fn.expand("<cword>")
         builtin.grep_string({ search = word })
@@ -38,6 +39,10 @@ return {
         local word = vim.fn.expand("<cWORD>")
         builtin.grep_string({ search = word })
       end)
+
+      -- miscellaneous
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+      vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
       require("telescope").load_extension("fzf")
     end,
