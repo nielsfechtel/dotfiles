@@ -8,6 +8,9 @@ if ! cd "$HOME/dotfiles" > /dev/null && pwd != "$HOME/dotfiles"; then
 	exit 1
 fi
 
+# need to remove it, as otherwise Stow won't be able to create the symlink
+rm ~/.bashrc
+
 # for every folder in here, execute `stow -S <folder>`
 ls -d */ | xargs -I {} bash -c "stow -S '{}'"
 
