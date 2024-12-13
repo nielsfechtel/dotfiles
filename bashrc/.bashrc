@@ -38,6 +38,7 @@ alias ll='ls -la'
 alias la='ls -lathr'
 
 alias v='nvim'
+alias k='kubectl'
 
 alias ..='cd ..'
 alias ...='cd ../../../'
