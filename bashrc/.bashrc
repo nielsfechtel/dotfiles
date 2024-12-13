@@ -10,6 +10,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Niels' section
+alias eb='nvim ~/.bashrc'
 
 # Bash vi-mode and re-add Ctrl-L for clear
 set -o vi
