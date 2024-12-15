@@ -92,3 +92,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+source <(kubectl completion bash)
+alias k=kubectl
+complete -o default -F __start_kubectl k
