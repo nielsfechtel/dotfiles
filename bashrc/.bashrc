@@ -56,7 +56,6 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
-
 # git
 alias lz='lazygit'
 alias gs='git status'
@@ -71,6 +70,14 @@ function gme() { git merge "$@"; }
 function glol() { git log --graph --decorate --pretty=oneline --abbrev-commit; }
 function glola() { git log --graph --decorate --pretty=oneline --abbrev-commit --all; }
 
+# kubernetes
+source <(kubectl completion bash)
+alias k=kubectl
+complete -o default -F __start_kubectl k
+alias kgp='k get pods'
+alias kgd='k get deployments'
+alias kgn='k get namespaces'
+alias kgv='k get persistentvolumeclaims'
 
 # fzf 
 # (register shell integration like using fzf for Ctrl+r, etc.)
@@ -84,7 +91,6 @@ eval "$(zoxide init --cmd cd bash)"
 # last step: Starship
 eval "$(starship init bash)"
 
-
 # pnpm
 export PNPM_HOME="/home/niels/.local/share/pnpm"
 case ":$PATH:" in
@@ -92,6 +98,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-source <(kubectl completion bash)
-alias k=kubectl
-complete -o default -F __start_kubectl k
