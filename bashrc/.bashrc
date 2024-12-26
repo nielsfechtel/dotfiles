@@ -39,7 +39,10 @@ alias ll='ls -la'
 alias la='ls -lathr'
 
 alias v='nvim'
-alias k='kubectl'
+# this alias is setup below, along withthe autocompletion
+# alias k='kubectl'
+alias mk='minikube'
+alias t='tmux'
 
 alias ..='cd ..'
 alias ...='cd ../../../'
