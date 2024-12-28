@@ -104,5 +104,8 @@ esac
 # Created by `pipx` on 2024-12-28 00:11:49
 export PATH="$PATH:/home/niels/.local/bin"
 
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
 # last step: Starship
 eval "$(starship init bash)"
