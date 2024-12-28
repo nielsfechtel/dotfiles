@@ -8,31 +8,41 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "custom/media"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
-        "mpd",
+        //"mpd",
         //"idle_inhibitor",
-        "pulseaudio",
-        "network",
+        //"pulseaudio",
+        //"network",
         //"power-profiles-daemon",
-        "cpu",
-        "memory",
+        //"cpu",
+        //"memory",
         //"temperature",
         //"backlight",
         //"keyboard-state",
-        "hyprland/language",
+        //"hyprland/language",
         // "battery",
         //"battery#bat2",
-	"privacy",
+        //"privacy",
+        "custom/updates",
         "clock"
         //"tray",
         // "custom/power"
     ],
     // Modules configuration
+    "custom/updates": {
+      "format": "  {}",
+      "tooltip-format": "{}",
+      "escape": true,
+      "return-type": "json",
+      "exec": "~/dotfiles/waybar/.config/waybar/updates.sh",
+      // in seconds
+      "restart-interval": 600,
+      "tooltip": false,
+    },
     "hyprland/language": {
     	"format": "{}",
 	"format-eu": "EU",
