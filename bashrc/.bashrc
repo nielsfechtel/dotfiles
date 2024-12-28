@@ -91,8 +91,6 @@ alias vf='fzf --bind "enter:become(nvim {})"'
 # zoxide (z)
 eval "$(zoxide init --cmd cd bash)"
 
-# last step: Starship
-eval "$(starship init bash)"
 
 # pnpm
 export PNPM_HOME="/home/niels/.local/share/pnpm"
@@ -101,3 +99,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
+# last step: Starship
+eval "$(starship init bash)"
