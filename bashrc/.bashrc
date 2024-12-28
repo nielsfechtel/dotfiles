@@ -43,6 +43,7 @@ alias v='nvim'
 # alias k='kubectl'
 alias mk='minikube'
 alias t='tmux'
+alias y='yazi'
 
 alias ..='cd ..'
 alias ...='cd ../../../'
