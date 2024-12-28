@@ -101,6 +101,8 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# Created by `pipx` on 2024-12-28 00:11:49
+export PATH="$PATH:/home/niels/.local/bin"
 
 # last step: Starship
 eval "$(starship init bash)"
