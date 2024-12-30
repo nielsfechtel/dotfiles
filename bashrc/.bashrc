@@ -9,9 +9,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# Niels' section
-alias eb='nvim ~/.bashrc'
-
 # Bash vi-mode and re-add Ctrl-L for clear
 set -o vi
 bind -x '"\C-l":clear'
@@ -20,7 +17,6 @@ bind -x '"\C-l":clear'
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
 export SAVEHIST=25000
-# apparently default, but necessary to set e.g. for MacOS
 export HISTCONTROL=ignorespace
 
 # Make aliases work with sudo, from askubuntu.com/questions/22037
@@ -39,23 +35,17 @@ alias ll='ls -la'
 alias la='ls -lathr'
 
 alias v='nvim'
-# this alias is setup below, along withthe autocompletion
-# alias k='kubectl'
 alias mk='minikube'
 alias t='tmux'
 alias y='yazi'
 
 alias ..='cd ..'
 alias ...='cd ../../../'
-# do not delete / or prompt if deleting more than 3 files at a time
 alias rm='rm -I --preserve-root'
-
 # confirmation
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
-
-# Parenting changing terms on /
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
