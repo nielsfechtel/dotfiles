@@ -97,5 +97,7 @@ export PATH="$PATH:/home/niels/.local/bin"
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
 
+eval "$(direnv hook bash)"
+
 # last step: Starship
 eval "$(starship init bash)"
