@@ -99,5 +99,7 @@ source ~/.cache/wal/colors-tty.sh
 
 eval "$(direnv hook bash)"
 
+eval "$(thefuck --alias)"
+
 # last step: Starship
 eval "$(starship init bash)"
