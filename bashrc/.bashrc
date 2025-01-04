@@ -38,6 +38,8 @@ alias v='nvim'
 alias mk='minikube'
 alias t='tmux'
 alias y='yazi'
+alias d='devpod'
+alias ds='devpod ssh'
 
 alias ..='cd ..'
 alias ...='cd ../../../'
