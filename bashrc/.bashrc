@@ -103,5 +103,7 @@ eval "$(direnv hook bash)"
 
 eval "$(thefuck --alias)"
 
+command -v devpod >/dev/null && . <(devpod completion bash)
+
 # last step: Starship
 eval "$(starship init bash)"
