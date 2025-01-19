@@ -1,11 +1,11 @@
 # ! "Run hyprshade install every time you make changes to hyprshade.toml to keep the user units in sync."
 
 [[shades]]
-# this is no shader, see hyprshade ls 
+# this is no shader (as in: no change), see hyprshade ls 
 name = "vibrance"
 default = true  # shader to use during times when there is no other shader scheduled
 
 [[shades]]
 name = "blue-light-filter"
-start_time = 19:00:00
+start_time = 18:30:00
 end_time = 06:00:00   # optional if you have more than one shade with start_time
