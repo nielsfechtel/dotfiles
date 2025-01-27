@@ -105,5 +105,7 @@ eval "$(thefuck --alias)"
 
 command -v devpod >/dev/null && . <(devpod completion bash)
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # last step: Starship
 eval "$(starship init bash)"
