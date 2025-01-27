@@ -52,6 +52,9 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+# docker
+alias lzd='lazydocker'
+
 # git
 alias lz='lazygit'
 alias gs='git status'
