@@ -1,6 +1,8 @@
 * {{
-    background: rgba(0,0,1,0.5);
-    foreground: #FFFFFF;
+    background: {background};
+    foreground: {foreground};
+    cursor:     {cursor};
+
     color0:     {color0};
     color1:     {color1};
     color2:     {color2};
@@ -17,4 +19,10 @@
     color13:    {color13};
     color14:    {color14};
     color15:    {color15};
+
+    background-alt: {background};
+    selected: {color2};
+    active: {color12};
+    urgent: {color9};
+    border-color: {color8};
 }}
