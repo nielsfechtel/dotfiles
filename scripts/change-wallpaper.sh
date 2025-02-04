@@ -13,10 +13,7 @@ source "$HOME/.cache/wal/colors.sh"
 new_wallpaper=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
 
 swww img $wallpaper --transition-step=20 --transition-fps=60
-# Set the wallpaper in hyprpanel's settings - it uses Matugen to generate
-# colors for itself, like we're using pywal16. Doesn't actually change the
-# wallpaper, since "Apply wallpaper" is turned off. 
-hyprpanel setWallpaper $wallpaper
+hyprpanel useTheme ~/.config/hyprpanel/theme.json
 
 # it seems I can't use @import in wofi's css, so I replace the first 20 lines with the css-lines
 filein=$HOME/.cache/wal/colors-define-color.css
