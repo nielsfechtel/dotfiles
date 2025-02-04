@@ -1,4 +1,5 @@
 /**
+ * Inspired by:
  *
  * Author : Aditya Shakya (adi1090x)
  * Github : @adi1090x
@@ -179,5 +180,5 @@ configuration {
 	me-accept-custom: "Control+MouseDPrimary";
 */
 }
-@theme "~/.config/rofi/themes/main-structure.rasi"
+@theme "~/.config/rofi/themes/design.rasi"
 

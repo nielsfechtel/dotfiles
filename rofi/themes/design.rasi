@@ -4,12 +4,12 @@
 configuration {
 	modi:                       "drun";
     show-icons:                 true;
-    display-drun:               " ";
+    display-drun:               "";
     font: "JetBrainsMono Nerd Font 10";
 	drun-display-format:        "{name}";
 }
 
-@import                      "rosepine.rasi" // import the colours
+@import                      "~/.cache/wal/colors-rofi.rasi" // import the colours
 /*****----- Main Window -----*****/
 window {
     transparency:                "real";
@@ -26,7 +26,7 @@ window {
     padding:                     0px;
     border:                      2px solid;
     border-radius:               15px;
-    border-color:                #AF8FD5;
+    /* border-color:                #AF8FD5; */
     background-color:            @background;
     cursor:                      "default";
 }
