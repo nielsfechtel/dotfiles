@@ -26,7 +26,9 @@ export HISTCONTROL=ignorespace
 alias sudo='sudo '
 
 # Man pages with syntax highlighting using terminal-colors, unlike bat and batman
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
+eval "$(batman --export-env)"
+export MANPAGER='less -R --use-color -Dd+r -Du+b'
+export LESS='-R'
 
 # fzf with preview
 alias fzfp='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
@@ -37,6 +39,8 @@ alias ll='ls -la'
 # also sort by time (-t), human-readable units (-h), reverse order (-r)
 alias la='ls -lathr'
 
+export EDITOR=nvim
+export VISUAL=nvim
 alias v='nvim'
 alias mk='minikube'
 alias t='tmux'
