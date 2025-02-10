@@ -24,7 +24,9 @@ return {
       local builtin = require("telescope.builtin")
 
       -- find files
-      vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Telescope find git-tracked files only" })
+      vim.keymap.set("n", "<C-p>", function()
+        builtin.find_files({ hidden = true })
+      end, { desc = "Telescope find git-tracked files only" })
       vim.keymap.set("n", "<C-g>", function()
         builtin.find_files({ no_ignore = true, hidden = true })
       end, { desc = "Telescope find ALL files including gitignored" })
