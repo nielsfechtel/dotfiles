@@ -26,7 +26,7 @@ export HISTCONTROL=ignorespace
 alias sudo='sudo '
 
 # Man pages with syntax highlighting using terminal-colors, unlike bat and batman
-eval '$(batman --export-env)'
+eval "$(batman --export-env)"
 export MANPAGER='less -R --use-color -Dd+r -Du+b'
 export LESS='-R'
 
@@ -65,14 +65,14 @@ alias lzd='lazydocker'
 # git
 alias lz='lazygit'
 alias gs='git status'
-function gsw() { git switch '$@'; }
-function gcm() { git commit -m '$@'; }
-function ga() { git add '$@'; }
-function gd() { git diff '$@'; }
+function gsw() { git switch "$@"; }
+function gcm() { git commit -m "$@"; }
+function ga() { git add "$@"; }
+function gd() { git diff "$@"; }
 alias gps='git push'
 alias gpl='git pull'
 alias gb='git branch'
-function gme() { git merge '$@'; }
+function gme() { git merge "$@"; }
 function glol() { git log --graph --decorate --pretty=oneline --abbrev-commit; }
 function glola() { git log --graph --decorate --pretty=oneline --abbrev-commit --all; }
 
@@ -87,39 +87,39 @@ alias kgv='k get persistentvolumeclaims'
 
 # fzf 
 # (register shell integration like using fzf for Ctrl+r, etc.)
-eval '$(fzf --bash)'
+eval "$(fzf --bash)"
 # add alias for opening in nvim
 alias vf='fzf --bind "enter:become(nvim {})"'
 
 # zoxide (z)
-eval '$(zoxide init --cmd cd bash)'
+eval "$(zoxide init --cmd cd bash)"
 
 
 # pnpm
-export PNPM_HOME='/home/niels/.local/share/pnpm'
-case ':$PATH:' in
-  *':$PNPM_HOME:'*) ;;
-  *) export PATH='$PNPM_HOME:$PATH' ;;
+export PNPM_HOME="/home/niels/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
 # Created by `pipx` on 2024-12-28 00:11:49
-export PATH='$PATH:/home/niels/.local/bin'
+export PATH="$PATH:/home/niels/.local/bin"
 
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
 
-eval '$(direnv hook bash)'
+eval "$(direnv hook bash)"
 
-eval '$(thefuck --alias)'
+eval "$(thefuck --alias)"
 
 command -v devpod >/dev/null && . <(devpod completion bash)
 
-export SSH_AUTH_SOCK='$XDG_RUNTIME_DIR/ssh-agent.socket'
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # last step: Starship
-eval '$(starship init bash)'
+eval "$(starship init bash)"
 
-export NVM_DIR='$HOME/.nvm'
-[ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'  # This loads nvm
-[ -s '$NVM_DIR/bash_completion' ] && \. '$NVM_DIR/bash_completion'  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
