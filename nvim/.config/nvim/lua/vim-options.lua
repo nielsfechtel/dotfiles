@@ -7,7 +7,6 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.g.background = "light"
 
-
 vim.opt.swapfile = false
 vim.opt.autowrite = true
 vim.opt.autoread = true
@@ -31,6 +30,30 @@ vim.wo.number = true
 -- Quickfix-list navigation keys
 vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<CR>zz')
+
+-- Nvim-Terminal - Ctrl+z, then fg, also an option though
+vim.api.nvim_create_autocmd('TermOpen', {
+  group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
+  callback = function()
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+    vim.keymap.set('t', '<Leader><ESC>', '<C-\\><C-n>', { noremap = true })
+  end,
+})
+-- From Teej's vid about this; for 'small terminal' and 'big terminal'
+vim.keymap.set('n', '<space>st', function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 15)
+end)
+vim.keymap.set('n', '<space>bt', function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 45)
+end)
+
 -- move lines up and down!! Yess
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
