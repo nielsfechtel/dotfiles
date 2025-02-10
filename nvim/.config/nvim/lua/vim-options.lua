@@ -1,3 +1,9 @@
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+
+-- General Settings
+local general = augroup("General", { clear = true })
+
 -- Leader-key
 vim.g.mapleader = " "
 -- Tab = 2 spaces wide
@@ -32,8 +38,8 @@ vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<CR>zz')
 
 -- Nvim-Terminal - Ctrl+z, then fg, also an option though
-vim.api.nvim_create_autocmd('TermOpen', {
-  group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
+autocmd('TermOpen', {
+  group = augroup('custom-term-open', { clear = true }),
   callback = function()
     vim.opt.number = false
     vim.opt.relativenumber = false
@@ -53,6 +59,35 @@ vim.keymap.set('n', '<space>bt', function()
   vim.cmd.wincmd("J")
   vim.api.nvim_win_set_height(0, 45)
 end)
+
+-- Disable auto-comment on new line
+autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt.formatoptions:remove { "c", "r", "o" }
+  end,
+  group = general,
+  desc = "Disable Automatic New Line Comment",
+})
+-- Auto-save
+autocmd({ "FocusLost", "BufLeave", "BufWinLeave", "InsertLeave" }, {
+  nested = true, -- for format on save
+  callback = function()
+    if vim.bo.filetype ~= "" and vim.bo.buftype == "" then
+      vim.cmd "silent! w"
+    end
+  end,
+  group = general,
+  desc = "Auto Save",
+})
+-- Update file on change
+autocmd("FocusGained", {
+  callback = function()
+    vim.cmd "checktime"
+  end,
+  group = general,
+  desc = "Update file when there are changes",
+})
 
 -- move lines up and down!! Yess
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
