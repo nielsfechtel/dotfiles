@@ -12,7 +12,8 @@ source "$HOME/.cache/wal/colors.sh"
 # get wallpaper-image file name, stripping the rest
 new_wallpaper=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
 
-swww img $wallpaper --transition-step=20 --transition-fps=60
+# this breaks hyprshade, so we turn on auto again (depending on time of day)
+hyprshade auto && swww img $wallpaper --transition-step=20 --transition-fps=60
 hyprpanel useTheme ~/.config/hyprpanel/theme.json
 
 # it seems I can't use @import in wofi's css, so I replace the first 20 lines with the css-lines
