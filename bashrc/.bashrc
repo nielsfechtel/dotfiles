@@ -25,6 +25,9 @@ export HISTCONTROL=ignorespace
 # Note that this breaks if using a flag for sudo; there are other longer solutions in the same question.
 alias sudo='sudo '
 
+# Man pages with syntax highlighting using terminal-colors, unlike bat and batman
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+
 # fzf with preview
 alias fzfp='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
