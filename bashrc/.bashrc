@@ -91,10 +91,6 @@ eval "$(fzf --bash)"
 # add alias for opening in nvim
 alias vf='fzf --bind "enter:become(nvim {})"'
 
-# zoxide (z)
-eval "$(zoxide init --cmd cd bash)"
-
-
 # pnpm
 export PNPM_HOME="/home/niels/.local/share/pnpm"
 case ":$PATH:" in
@@ -123,3 +119,6 @@ eval "$(starship init bash)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# zoxide (z)
+eval "$(zoxide init --cmd cd bash)"
