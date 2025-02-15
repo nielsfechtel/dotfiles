@@ -3,7 +3,7 @@
 # all this is inspired by My Linux For Work's swww- and pywal-setup
 
 # get a random image - do it Quietly, Not changing the wallpaper, In folder X
-~/.local/bin/wal -q -n -i $HOME/wallpaper/
+~/.local/bin/wal --saturate 0.6 --contrast 11.0 -q -n -i $HOME/wallpaper/
 
 # get the newly-generated color-schemes in here 
 # below we are only using the wallpaper-variable, which contains the full path
