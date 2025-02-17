@@ -11,11 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 -- prepend to rtp (runtimepath)
-vim.opt.rtp:prepend(lazypath) 
+vim.opt.rtp:prepend(lazypath)
 
 -- load options
 require("vim-options")
 -- setup lazy.nvim
 require("lazy").setup("plugins")
-
-
