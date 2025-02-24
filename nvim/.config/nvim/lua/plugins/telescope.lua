@@ -12,6 +12,18 @@ return {
     config = function()
       -- this was previously called with the extension-table above
       require("telescope").setup({
+        pickers = {
+          live_grep = {
+            file_ignore_patterns = { "node_modules", ".git", ".venv" },
+            additional_args = function(_)
+              return { "--hidden" }
+            end,
+          },
+          find_files = {
+            file_ignore_patterns = { "node_modules", ".git", ".venv" },
+            hidden = true,
+          },
+        },
         fzf = {
           fuzzy = true,              -- false will only do exact matching
           override_generic_sorter = true, -- override the generic sorter
