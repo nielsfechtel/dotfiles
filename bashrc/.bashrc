@@ -19,6 +19,9 @@ export HISTSIZE=25000
 export SAVEHIST=25000
 export HISTCONTROL=ignorespace
 
+# Use libvirt-system-variant by default
+export LIBVIRT_DEFAULT_URI='qemu:///system'
+
 # Make aliases work with sudo, from askubuntu.com/questions/22037
 # "Bash only checks the first word of a command for an alias. [...] We can tell bash to check
 # the next word after the alias (i.e. sudo) by adding a space at the end of the alias value"
