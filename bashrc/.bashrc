@@ -17,6 +17,7 @@ bind -x '"\C-l":clear'
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
+
 # History longer
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
@@ -54,6 +55,7 @@ alias t='tmux'
 alias y='yazi'
 alias d='devpod'
 alias ds='devpod ssh'
+alias h='hyprland'
 
 alias ..='cd ..'
 alias ...='cd ../../../'
