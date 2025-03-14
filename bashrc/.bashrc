@@ -13,6 +13,10 @@ PS1='[\u@\h \W]\$ '
 set -o vi
 bind -x '"\C-l":clear'
 
+# Enable Fcitx5 for input method editors
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
 # History longer
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
