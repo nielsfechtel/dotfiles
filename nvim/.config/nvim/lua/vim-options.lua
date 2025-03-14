@@ -73,7 +73,12 @@ autocmd("FileType", {
 autocmd({ "FocusLost", "BufLeave", "BufWinLeave", "InsertLeave" }, {
   nested = true, -- for format on save
   callback = function()
-    if vim.bo.filetype ~= "" and vim.bo.buftype == "" then
+    -- Don't autosave when editing config-files, otherwise there's constant config-reload-messages
+    -- expand('%:p') gives full file path; find checks if the string is inside
+    if string.find(vim.fn.expand('%:p'), [[.config/nvim]]) then
+      return
+    end
+    if vim.bo.filetype ~= ""and vim.bo.buftype == "" then
       vim.cmd "silent! w"
     end
   end,
