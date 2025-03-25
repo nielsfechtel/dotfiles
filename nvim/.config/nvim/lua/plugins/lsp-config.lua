@@ -32,13 +32,13 @@ return {
 	{
 		"stevearc/conform.nvim",
 		-- Lazy.nvim setup mostly taken from here https://github.com/stevearc/conform.nvim/blob/master/doc/recipes.md#lazy-loading-with-lazynvim
-		event = { "BufWritePre" },
+		event = { "BufReadPre", "BufNewFile" },
 		cmd = { "ConformInfo" },
 		keys = {
 			{
 				"<leader>gf",
 				function()
-					require("conform").format({ async = true })
+					require("conform").format({ lsp_fallback = true, async = false, timeout_ms = 1000 })
 				end,
 				mode = "",
 				desc = "Format buffer",
@@ -65,11 +65,14 @@ return {
 				lsp_format = "fallback",
 			},
 			-- Set up format-on-save
-			format_on_save = { timeout_ms = 500 },
+			format_on_save = { lsp_fallback = true, async = false, timeout_ms = 1000 },
 			-- Customize formatters
 			formatters = {
+				injected = { options = { ignore_errors = true } },
+
+				-- bash
 				shfmt = {
-					prepend_args = { "-i", "2" },
+					prepend_args = { "-i", "2", "-ci" },
 				},
 			},
 		},
@@ -78,35 +81,4 @@ return {
 			vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 		end,
 	},
-	-- {
-	-- 	"mfussenegger/nvim-lint",
-	-- 	event = {
-	-- 		"BufReadPre",
-	-- 		"BufNewFile",
-	-- 	},
-	-- 	config = function()
-	-- 		local lint = require("lint")
-
-	-- 		lint.linters_by_ft = {
-	-- 			javascript = { "eslint_d" },
-	-- 			typescript = { "eslint_d" },
-	-- 			javascriptreact = { "eslint_d" },
-	-- 			typescriptreact = { "eslint_d" },
-	-- 			python = { "pylint" },
-	-- 		}
-
-	-- 		local lint_augroup = vim.api.nvim_create_augroup("lnit", { clear = true })
-
-	-- 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
-	-- 			group = lint_augroup,
-	-- 			callback = function()
-	-- 				lint.try_lint()
-	-- 			end,
-	-- 		})
-
-	-- 		vim.keymap.set("n", "<leader>l", function()
-	-- 			lint.try_lint()
-	-- 		end, { desc = "Trigger linting for current file" })
-	-- 	end,
-	-- },
 }
