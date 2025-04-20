@@ -18,6 +18,10 @@ GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 
+# Make sure LANG and LC_C are set - some tools like tmux
+# need it in nested sessions for using e.g. powerline-glyphs
+export LANG=en_US.utf8
+export LC_ALL=en_US.utf8
 # History longer
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
