@@ -22,6 +22,7 @@ XMODIFIERS=@im=fcitx
 # need it in nested sessions for using e.g. powerline-glyphs
 export LANG=en_US.utf8
 export LC_ALL=en_US.utf8
+
 # History longer
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
@@ -60,6 +61,7 @@ alias y='yazi'
 alias d='devpod'
 alias ds='devpod ssh'
 alias h='hyprland'
+alias f='fg'
 
 alias ..='cd ..'
 alias ...='cd ../../../'
