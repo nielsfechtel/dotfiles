@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -100,7 +96,7 @@ alias kgd='k get deployments'
 alias kgn='k get namespaces'
 alias kgv='k get persistentvolumeclaims'
 
-# fzf 
+# fzf
 # (register shell integration like using fzf for Ctrl+r, etc.)
 eval "$(fzf --bash)"
 # add alias for opening in nvim
@@ -109,8 +105,8 @@ alias vf='fzf --bind "enter:become(nvim {})"'
 # pnpm
 export PNPM_HOME="/home/niels/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
@@ -132,8 +128,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 eval "$(starship init bash)"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # zoxide (z)
 eval "$(zoxide init --cmd cd bash)"
