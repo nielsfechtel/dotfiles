@@ -1,17 +1,22 @@
+```
+ _   _ _      _     _                   _       _    __ _ _           
+| \ | (_)    | |   ( )                 | |     | |  / _(_) |          
+|  \| |_  ___| |___|/                __| | ___ | |_| |_ _| | ___  ___ 
+| . ` | |/ _ \ / __|   cosmetic     / _` |/ _ \| __|  _| | |/ _ \/ __|
+| |\  | |  __/ \__ \               | (_| | (_) | |_| | | | |  __/\__ \
+\_| \_/_|\___|_|___/                \__,_|\___/ \__|_| |_|_|\___||___/
+```
+
 # My dotfiles
 
-<!--toc:start-->
-- [My dotfiles](#my-dotfiles)
-  - [Credits](#credits)
-<!--toc:end-->
+Cosmetic dotfiles for my Arch install, accompanied by files from the the shared dotfiles-repo.
 
-<img src="https://github.com/user-attachments/assets/6d405451-d251-4644-879f-e8e23bf18bfc" alt="Description" width="300" height="200" />
-<img src="https://github.com/user-attachments/assets/b065c1c5-fbc3-47f0-9f9d-79d702068f09" alt="Description" width="300" height="200" />
-<img src="https://github.com/user-attachments/assets/eaae4ee6-5f1c-4d86-9ea3-942a98fb63ea" alt="Description" width="300" height="200" />
-<img src="https://github.com/user-attachments/assets/3e7fcc72-471d-444d-916e-40a4c7f6c491" alt="Description" width="300" height="200" />
-<img src="https://github.com/user-attachments/assets/de50eb25-9eb7-4c7f-a3c7-29bb66038524" alt="Description" width="300" height="200" />
-<img src="https://github.com/user-attachments/assets/b78be2be-87a0-407e-9dd0-39fe00b0e88c" alt="Description" width="300" height="200" />
-These are in format suitable for GNU stow. I usually just do symbolic links manually.
+<img src="https://github.com/user-attachments/assets/6d405451-d251-4644-879f-e8e23bf18bfc" alt="Description" width="250" height="150" />
+<img src="https://github.com/user-attachments/assets/b065c1c5-fbc3-47f0-9f9d-79d702068f09" alt="Description" width="250" height="150" />
+<img src="https://github.com/user-attachments/assets/eaae4ee6-5f1c-4d86-9ea3-942a98fb63ea" alt="Description" width="250" height="150" />
+<img src="https://github.com/user-attachments/assets/3e7fcc72-471d-444d-916e-40a4c7f6c491" alt="Description" width="250" height="150" />
+<img src="https://github.com/user-attachments/assets/de50eb25-9eb7-4c7f-a3c7-29bb66038524" alt="Description" width="250" height="150" />
+<img src="https://github.com/user-attachments/assets/b78be2be-87a0-407e-9dd0-39fe00b0e88c" alt="Description" width="250" height="150" />
 
 ## Credits
 
