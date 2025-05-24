@@ -10,7 +10,6 @@ set -o vi
 bind -x '"\C-l":clear'
 
 # Enable Fcitx5 for input method editors
-export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
