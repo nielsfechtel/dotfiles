@@ -35,7 +35,7 @@ export MANPAGER='less -R --use-color -Dd+r -Du+b'
 export LESS='-R'
 
 alias ls='ls -l --color=auto'
-alias ll='ls -la'
+alias ll='ls -lah'
 # also sort by time (-t), human-readable units (-h), reverse order (-r)
 alias la='ls -lathr'
 
