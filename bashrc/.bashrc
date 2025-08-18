@@ -44,8 +44,11 @@ export VISUAL=nvim
 alias v='nvim'
 alias t='tmux'
 alias ds='devpod ssh'
+alias du='devpod up .'
 alias h='hyprland'
 alias f='fg'
+alias c='cat'
+alias ff='fastfetch'
 
 alias ..='cd ..'
 alias ...='cd ../../'
