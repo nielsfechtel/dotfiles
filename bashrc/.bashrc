@@ -118,5 +118,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/home/niels/.iximiuz/labctl/bin
 source <(labctl completion bash)
 
+[ -f /home/niels/.zellij-completion.bash ] && source /home/niels/.zellij-completion.bash
+
 # zoxide (z)
 eval "$(zoxide init --cmd cd bash)"
