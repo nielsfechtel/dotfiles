@@ -2,12 +2,11 @@
 
 # all this is inspired by My Linux For Work's swww- and pywal-setup
 
-export HOME=/home/niels
-
 # get a random image - do it Quietly, Not changing the wallpaper, In folder X
-/home/niels/.local/bin/wal --saturate 0.6 --contrast 11.0 -q -n -i /home/niels/wallpaper/
 
-# get the newly-generated color-schemes in here 
+/usr/sbin/wal --saturate 0.6 --contrast 11.0 -q -n -i /home/niels/wallpaper/
+
+# get the newly-generated color-schemes in here
 # below we are only using the wallpaper-variable, which contains the full path
 source "/home/niels/.cache/wal/colors.sh"
 
